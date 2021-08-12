@@ -138,30 +138,7 @@ $('.thumbnailPhoto').click((event) => {
   loadPhoto(numberIndex);
   activateThumbnailPhoto(numberIndex); //
 
-  $('#rightArrow').click(() => {
-    if( numberIndex < imagesData.length-1){ 
-  numberIndex++;} 
-  else {
-    numberIndex = -1;
-    numberIndex++;
-  };
-  loadPhoto(numberIndex);
-  activateThumbnailPhoto(numberIndex); //
-  console.log(numberIndex);
-  });
-
-  $('#leftArrow').click(() => {
-    if(numberIndex > 0) { 
-    numberIndex--;}
-  else {
-    numberIndex = 8;
-    numberIndex--;
-  };
-    loadPhoto(numberIndex);
-	activateThumbnailPhoto(numberIndex); //
-    console.log(numberIndex);
-  });
-
+  // ide nem kellenek meg egyszer a leftarrow-s es rightarrow-s click-ek, azokat toroltem
   
 });
 
