@@ -138,6 +138,7 @@ $('.thumbnailPhoto').click((event) => {
   loadPhoto(numberIndex);
   activateThumbnailPhoto(numberIndex); //
 
+ // ide nem kellenek meg egyszer a leftarrow-s es rightarrow-s click-ek, azokat toroltem
 });
 
 
