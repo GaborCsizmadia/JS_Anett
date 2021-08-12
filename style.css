@@ -1,0 +1,164 @@
+body {
+    background-color: rgb(240, 240, 240);
+}
+main {
+    margin: 0 auto;
+    width: 1100px;
+    display: flex;
+    height: 573px;
+    background-color: rgb(240, 240, 240);
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 2px 3px 3px 3px silver;
+    
+
+}
+
+.left, .right {
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+#photo {
+    width: 100%;
+   
+}
+
+.middle {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.gray-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    padding: 30px;
+    color: white;
+    font-family: 'Arimo', sans-serif;
+}
+
+.gray-container h2 {
+    margin: 0 0 20px 0; 
+    font-weight: 700;
+}
+
+.gray-container p {
+    margin: 0;
+}
+
+#rightArrow {
+    transform: rotate(0.5turn);
+}
+
+#rightArrow, #leftArrow {
+    width: 50%;
+}
+
+#rightArrow:hover, #leftArrow:hover {
+    opacity: 0.5;
+}
+
+.thumbnailsBox {
+    width: 900px;
+    margin: -10px auto;
+    position: relative;
+}
+
+
+
+.thumbnails {
+    width: 900px;
+    background-color: none;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.thumbnailPhoto img {
+    width: 90px;
+    border: solid 7px white;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px 0 silver;
+}
+
+.thumbnailPhoto {
+    position: relative;
+}
+
+.thumbnailPhoto::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-bottom: 12px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-radius: 3px;
+    visibility: hidden;  /* ezt erdemes hasznalni a display: none helyett, mert ez a helyet fenntartja, csak lathatatlanna teszi */
+}
+
+/* uj osztaly az aktiv thumbnail kep jelzesere, csak ez lesz lathato */
+.activeThumbnailPhoto::after {
+	visibility: visible;
+}
+
+.thumbnailPhoto img:hover {
+    box-shadow: 0 3px 3px 0 silver;
+    margin-top: -3px;
+}
+
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+    margin: 0 auto;   
+}
+
+.title .thumbnailTitles { 
+    font-family: 'Arimo', sans-serif;
+    font-size: 10px;
+    width: 90px;
+    background-color:black;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px 2px rgb(0, 0, 0);
+    text-align: center;
+    padding: 5px;
+    color: white; 
+    position: relative;
+    display: none;
+}
+
+.title .thumbnailTitles::after {
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 12px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -10px;
+    left: 40px;
+    border-radius: 3px;
+}
+
+.title .thumbnailTitles p {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
